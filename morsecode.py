@@ -58,7 +58,7 @@ def is_validated_english_sentence(user_input):
     """
     # ===Modify codes below=============
     # 조건에 따라 변환되어야 할 결과를 result 변수에 할당 또는 필요에 따라 자유로운 수정
-    sp = "_@#$%^&*()-+=[]{}\"';:\|`~0123456789"
+    sp = "_@#$%^&*()-+=[]{}\"';:\\|`~0123456789"
     for i in user_input:
         if i in sp:
             return False
@@ -139,7 +139,7 @@ def encoding_character(english_character):
     # ===Modify codes below=============
     # 조건에 따라 변환되어야 할 결과를 result 변수에 할당 또는 필요에 따라 자유로운 수정
     morse_code_dict = get_morse_code_dict()
-    result = morse_code_dict[english_character]
+    result = morse_code_dict[english_character.upper()]
 
     return result
     # ==================================
