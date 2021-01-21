@@ -147,7 +147,6 @@ def encoding_character(english_character):
     return result
     # ==================================
 
-
 def decoding_sentence(morse_sentence):
     """
     Input:
@@ -158,7 +157,13 @@ def decoding_sentence(morse_sentence):
     """
     # ===Modify codes below=============
     # 조건에 따라 변환되어야 할 결과를 result 변수에 할당 또는 필요에 따라 자유로운 수정
-    result = ''.join(map(decoding_character, morse_sentence.split()))
+    res = []
+    for item in morse_sentence.split(" "):
+        if item == '':
+            res.append(' ')
+        else:
+            res.append(decoding_character(item))
+    result = ''.join(res)
 
     return result
     # ==================================
